@@ -31,8 +31,13 @@ public class Sequence {
     }
 
     public static void main(String[] args) {
-        Sequence s = new Sequence();
-        new Thread(() -> System.out.println(Thread.currentThread().getName() + " " + s.getNext())).start();
+//        Sequence s = new Sequence();
+//        new Thread(() -> System.out.println(Thread.currentThread().getName() + " " + s.getNext())).start();
+
+        AtomicIntegerArray atomicIntegerArray = new AtomicIntegerArray(10);
+        atomicIntegerArray.set(5, 10);
+
+
     }
 
 

@@ -2,10 +2,12 @@ package com.nemo.concurrent.unsafe;
 
 public class User {
 
-    public static String title = "haha";
+    private static String title = "haha";
 
     private String name;
     private int age;
+
+    private short a;
 
     public User() {}
 
@@ -28,5 +30,17 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public short getA() {
+        return a;
+    }
+
+    public void setA(short a) {
+        this.a = a;
+    }
+
+    public static String getTitle() {
+        return title;
     }
 }

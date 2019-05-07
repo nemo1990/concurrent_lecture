@@ -16,7 +16,9 @@ repositories {
 
 dependencies {
     compile (
-        'org.springframework:spring-context:5.1.5.RELEASE'
+        'org.springframework:spring-context:5.1.5.RELEASE',
+        'org.joda:joda-primitives:1.0',
+        'joda-time:joda-time:2.9.9'
     )
 }
 

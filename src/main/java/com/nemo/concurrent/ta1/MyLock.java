@@ -6,17 +6,12 @@ import java.util.concurrent.locks.Lock;
 
 public class MyLock implements Lock{
 
-    private boolean isLocked = false;
-
-    Thread lockBy = null;
-
-    int lockCount = 0;
-
+    private volatile boolean isLocked = false;
+    private volatile Thread lockBy = null;
+    private int lockCount = 0;
 
     @Override
     public synchronized void lock() {
-        // ...
-
         Thread currentThread = Thread.currentThread();
 
         while (isLocked && currentThread != lockBy) {
@@ -26,6 +21,7 @@ public class MyLock implements Lock{
                 e.printStackTrace();
             }
         }
+
         isLocked = true;
         lockBy = currentThread;
         lockCount ++;

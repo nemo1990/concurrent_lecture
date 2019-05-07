@@ -2,7 +2,7 @@ package com.nemo.concurrent.ta1;
 
 public class Demo {
 
-    MyLock lock = new MyLock();
+    private MyLock lock = new MyLock();
 
     public void a() {
         lock.lock();
